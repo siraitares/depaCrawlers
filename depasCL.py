@@ -30,6 +30,6 @@ while (counter <= pagesToCrawl):
                 title = title.replace(',', '\'')
                 date = i.find('time', attrs={'class': 'result-date'}).text.encode('utf-8')
                 link = i.find('a')['href'].encode('utf-8')
-                f.write(title + ',' + str(price) + ',' + baseUrl + link + ',' + date + '\n')
+                f.write(title + ',' + str(price) + ',' + link + ',' + date + '\n')
     counter += 1
 f.close()
